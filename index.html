@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post Application</title>
+    <style>
+ 
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+
+        #blog-container {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .blog-post {
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            min-width: 0;
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .post-header h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .blog-post p {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+
+        .post-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        button {
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 700px) {
+            #blog-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Blog Post Application</h1>
+
+    <section>
+        <button id="add-post-btn">Add Blog Post</button>
+        <div id="blog-container"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
